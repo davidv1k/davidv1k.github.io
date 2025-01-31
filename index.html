@@ -2,49 +2,185 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My First Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Vik</title>
+    <!-- Add Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #2563eb;
+            --text-color: #1f2937;
+            --bg-color: #ffffff;
+            --accent-bg: #f3f4f6;
+            --heading-font: 'Playfair Display', serif;
+            --body-font: 'Source Sans Pro', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: var(--body-font);
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--bg-color);
+        }
+
+        h1, h2, h3 {
+            font-family: var(--heading-font);
+        }
+
+        .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
+            padding: 0 20px;
         }
+
+        nav {
+            background: var(--accent-bg);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
         h1 {
-            color: #2c3e50;
-            text-align: center;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
         }
-        .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+        .blog-post {
+            background: var(--accent-bg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
         }
-        p {
-            margin-bottom: 15px;
+
+        .blog-post h2 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-post .date {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .cv-section {
+            margin-bottom: 2rem;
+        }
+
+        .cv-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-bg);
+            padding-bottom: 0.5rem;
+        }
+
+        .experience-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-item h3 {
+            margin-bottom: 0.25rem;
+        }
+
+        .experience-item .date {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to My First Website</h1>
-        <p>Hello! This is my very first webpage. I'm learning HTML and CSS, and this is an exciting start to my web development journey.</p>
-        <p>Some things I hope to learn:</p>
+    <!-- Rest of the HTML remains the same -->
+    <nav>
         <ul>
-            <li>HTML structure</li>
-            <li>CSS styling</li>
-            <li>Creating responsive designs</li>
-            <li>Web development best practices</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="cv.html">CV</a></li>
         </ul>
+    </nav>
+
+    <!-- Home Page -->
+    <div class="container">
+        <h1>Welcome to My Site</h1>
+        <p>Hello! I'm [Your Name], a [Your Profession] passionate about [Your Interests].</p>
+        <p>Feel free to explore my blog posts and check out my professional experience.</p>
     </div>
-    <div class="container2">
-        <h3>Testing</h3>
-        <p>test text</p>
+
+    <!-- Blog Page -->
+    <div class="container" style="display: none;">
+        <h1>Blog</h1>
+        <div class="blog-post">
+            <h2>My Latest Project</h2>
+            <div class="date">January 31, 2025</div>
+            <p>Brief preview of the blog post content...</p>
+            <a href="blog-post.html">Read more</a>
+        </div>
+        <div class="blog-post">
+            <h2>Thoughts on Technology</h2>
+            <div class="date">January 25, 2025</div>
+            <p>Brief preview of the blog post content...</p>
+            <a href="blog-post-2.html">Read more</a>
+        </div>
+    </div>
+
+    <!-- CV Page -->
+    <div class="container" style="display: none;">
+        <h1>Curriculum Vitae</h1>
+        
+        <div class="cv-section">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Senior Developer - Company Name</h3>
+                <div class="date">2023 - Present</div>
+                <p>Description of your responsibilities and achievements...</p>
+            </div>
+            <div class="experience-item">
+                <h3>Developer - Previous Company</h3>
+                <div class="date">2020 - 2023</div>
+                <p>Description of your responsibilities and achievements...</p>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h2>Education</h2>
+            <div class="experience-item">
+                <h3>University Name</h3>
+                <div class="date">2016 - 2020</div>
+                <p>Degree details and achievements...</p>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h2>Skills</h2>
+            <p>Programming Languages: JavaScript, Python, etc.</p>
+            <p>Frameworks: React, Node.js, etc.</p>
+            <p>Other Skills: Project Management, Team Leadership</p>
+        </div>
     </div>
 </body>
 </html>
